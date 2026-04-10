@@ -157,3 +157,208 @@ button {
 img {
     width: clamp(300px, 35vw, 600px);
 }
+
+
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        padding-inline: 20px;
+    }
+
+    .container {
+        padding: 1.5rem;
+        margin: 15px;
+    }
+
+    .without-btn {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: clamp(250px, 40vw, 450px);
+    }
+
+    .answer-btn {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding-inline: 15px;
+        font-size: 0.9rem;
+    }
+
+    .header {
+        height: 3.5rem;
+        width: 8rem;
+        padding-inline: 10px;
+    }
+
+    .container {
+        padding: 1rem;
+        margin: 10px;
+        border-radius: calc(var(--border-radius) - 0.125rem);
+    }
+
+    .without-btn {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .results {
+        width: 100%;
+    }
+
+    .next-button,
+    .back-button {
+        height: calc(var(--button-height) - 0.5rem);
+        padding: 0 1rem;
+        font-size: 1rem;
+        margin-block: 15px;
+        border-radius: 0.75rem;
+    }
+
+    .btn-section {
+        gap: 8px;
+    }
+
+    .btn-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .next-hint {
+        font-size: 0.8rem;
+    }
+
+    .answer-btn {
+        padding: 8px;
+        margin-block: 3px;
+        font-size: 0.9rem;
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    img {
+        width: clamp(200px, 70vw, 400px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-inline: 10px;
+        font-size: 0.85rem;
+    }
+
+    .header {
+        height: 3rem;
+        width: 7rem;
+    }
+
+    .container {
+        padding: 0.75rem;
+        margin: 8px;
+    }
+
+    .without-btn {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .next-button,
+    .back-button {
+        height: 2.8rem;
+        font-size: 0.9rem;
+        margin-block: 10px;
+    }
+
+    .answer-btn {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    .next-hint {
+        font-size: 0.75rem;
+    }
+
+    img {
+        width: clamp(150px, 85vw, 300px);
+    }
+}
+
+@media (min-width: 1400px) {
+    body {
+        padding-inline: 50px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 2.5rem;
+    }
+
+    img {
+        width: clamp(350px, 30vw, 600px);
+    }
+
+    .answer-btn {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .next-button,
+    .back-button {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+    body {
+        padding-inline: 20px;
+    }
+
+    .container {
+        padding: 0.75rem;
+        margin: 8px;
+    }
+
+    .without-btn {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+
+    img {
+        max-height: 50vh;
+        width: auto;
+    }
+
+    .btn-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .answer-btn {
+        width: auto;
+        flex: 1;
+    }
+}
+
+@supports (padding: max(0px)) {
+    body {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+    }
+
+    @media (max-width: 767px) {
+        body {
+            padding-left: max(10px, env(safe-area-inset-left));
+            padding-right: max(10px, env(safe-area-inset-right));
+        }
+    }
+}

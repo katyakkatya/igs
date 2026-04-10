@@ -1,9 +1,7 @@
-import heroImage from "../assets/images/ns__children_hero-banner_new-3d.svg";
-
 function Story3({ onNext, onBack }) {
   return (
     <div className="container">
-      <img src={heroImage} alt="Дети - 3D баннер" className="story3-image" />
+      <img loading="lazy" src="https://cdn.ingos.ru/images/antimite_hero-banner-new24.svg" alt="Страхование от укуса клеща" />
       <div className="story3">
         <h2 className="story3-header">Невидимый враг</h2>
         <p className="story3-text">
