@@ -1,0 +1,159 @@
+:root {
+    --primary: #568EFF;
+    --primary-hover: #124FC9;
+    --surface-body: #0D0D0E;
+    --surface-main: #1C1C1E;
+    --button-height: 3.5rem;
+    --button-padding: 0 1.5rem;
+    --border-radius: 0.5rem;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    background-color: var(--surface-body);
+    color: #fff;
+    font-family: 'Ingo Stem', sans-serif;
+    padding-inline: 30px;
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+}
+
+@font-face {
+    font-family: Ingo Stem;
+    src: url(https://cdn.ingos.ru/fonts/IngoStem-Light-cut.woff2) format("woff2"), url(https://static.ingos.ru/fonts/IngoStem-Light-cut.woff2) format("woff2");
+    font-style: normal;
+    font-weight: 300;
+    text-rendering: optimizeSpeed;
+    font-display: fallback;
+}
+
+.header {
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 15px;
+    margin-inline: auto;
+    width: 10.125rem;
+}
+
+.ng-star-inserted {
+    fill: var(--primary);
+    display: flex;
+}
+
+.container {
+    background-color: var(--surface-main);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    border-radius: var(--border-radius);
+}
+
+.without-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.next-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--button-height);
+    padding: var(--button-padding);
+    margin-block: 20px;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: var(--primary);
+    border: 1px solid transparent;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 100%;
+    transition: all .3s, outline .05s;
+}
+
+.next-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--button-height);
+    padding: var(--button-padding);
+    margin-block: 20px;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: var(--primary);
+    border: 1px solid transparent;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 100%;
+    transition: all .3s, outline .05s;
+}
+
+.back-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn-row {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    width: 100%;
+}
+
+.next-hint {
+    color: #db5856;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: center;
+}
+
+.answer-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-block: 5px;
+    color: #fff;
+}
+
+.answer-btn.answer-correct {
+    background-color: #77DD77;
+}
+
+.answer-btn.answer-wrong {
+    background-color: #db5856;
+}
+
+img {
+    width: clamp(300px, 35vw, 600px);
+}
